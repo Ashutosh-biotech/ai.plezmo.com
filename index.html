@@ -1,0 +1,46 @@
+<!doctypeHTML>
+
+<html>
+
+  <head>
+    <script src="smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+
+  <body>
+    <script>
+      $(document).on('click', '#verify-email', () =>
+      {
+        let to = $("#EmailTo").val();
+        let from = "" /*your email id in "" */ ;
+        let password = "" /* your password in "" */ ;
+        let subject = "" /* enter the subject*/ ;
+        let message = "" /*enter you message here*/ ;
+
+        function email(from, password, to, subject, message)
+        {
+          Email.send(
+          {
+            SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+            Username: from,
+            Password: password,
+            To: to,
+            From: from,
+            Subject: subject,
+            Body: message
+          });
+        }
+      });
+    </script>
+  </body>
+
+</html>
+<!--
+Visual Code Mobile
+Developed By Manish Nirmal
+App Available on Play Store :-
+https://play.google.com/store/apps/details?id=lk.visual.code.mobile
+YouTube :-
+https://youtube.com/ManishNirmal
+-->
