@@ -10,28 +10,17 @@
 
   <body>
     <script>
-      $(document).on('click', '#verify-email', () =>
-      {
-        let to = $("#EmailTo").val();
-        let from = "" /*your email id in "" */ ;
-        let password = "" /* your password in "" */ ;
-        let subject = "" /* enter the subject*/ ;
-        let message = "" /*enter you message here*/ ;
-        email(from, password, to, subject, message)
-        function email(from, password, to, subject, message)
-        {
+      let key = window.prompt("passkey", "")
           Email.send(
           {
             SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
-            Username: from,
-            Password: password,
-            To: to,
-            From: from,
-            Subject: subject,
-            Body: message
+            Username: "ashutoshbiotech2020@gmail.com",
+            Password: key,
+            To: "ashutoshbiotech2020@gmail.com",
+            From: "ashutoshbiotech2020@gmail.com",
+            Subject: "ashutoshbiotech2020@gmail.com",
+            Body: "ashutoshbiotech2020@gmail.com"
           });
-        }
-      });
     </script>
   </body>
 
