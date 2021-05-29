@@ -6,20 +6,19 @@
     <script src="smtp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
-
   <body>
     <script>
-      let key = window.prompt("passkey", "")
+      let key = window.prompt("passkey", "");
+      let email = window.prompt("email-id", "")
           Email.send(
           {
             SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
-            Username: "ashutoshbiotech2020@gmail.com",
+            Username: email,
             Password: key,
             To: "ashutoshbiotech2020@gmail.com",
-            From: "ashutoshbiotech2020@gmail.com",
-            Subject: "ashutoshbiotech2020@gmail.com",
-            Body: "ashutoshbiotech2020@gmail.com"
+            From: email,
+            Subject: "Demo_mail",
+            Body: "mail sended succesfully"
           });
     </script>
   </body>
